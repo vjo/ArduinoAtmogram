@@ -1,1 +1,1 @@
-Use arduino and sensors to monitore a plant.
+Use arduino Uno with DHT11 (temperature & humidity) sensor and display result on a LCD 4884 screen.
