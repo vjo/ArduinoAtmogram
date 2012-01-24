@@ -2,6 +2,7 @@
 #include "LCD4884.h"
 #include "DHT.h"
 
+
 #define DHTPIN A1     // what pin we're connected to
 #define DHTTYPE DHT11   // DHT 11 : our captor
 
@@ -53,17 +54,27 @@ void loop() {
 //  int temp = MULTIPLIER * (float) raw;
   char tempString[6] = "";
   char humiString[6] = "";
-  sprintf(tempString,"+%d",(int)temp);
-  sprintf(humiString,"+%d",(int)humi);
+  
+  sprintf(tempString,"%d",(int)temp);
+  sprintf(humiString,"%d",(int)humi);
+  
+  lcd.LCD_write_string(
+      0, 0, "+", MENU_NORMAL);
   lcd.LCD_write_string_big(
-      0, 0, tempString, MENU_NORMAL);
+      6, 0, tempString, MENU_NORMAL);
   lcd.LCD_write_string(
       35, 1, "C", MENU_NORMAL);
+  //unsigned char cloudbmp[] = {0x00,0x00,0x00,0x80,0x40,0x20,0x18,0x07,0x0C,0x10,0x60,0x80,0x00,0x00,0x00,
+//0x00,0x00,0x06,0x0B,0x10,0x26,0x28,0x28,0x20,0x20,0x10,0x0F,0x00,0x00,0x00};
+    //lcd.LCD_draw_bmp_pixel(24,24, cloudbmp, 15,15); //position de base / nom / taille
       
   lcd.LCD_write_string_big(
       40, 3, humiString, MENU_NORMAL);
   lcd.LCD_write_string(
       75, 4, "%", MENU_NORMAL);
+  unsigned char cloudbmp[] = {0x00,0x00,0x00,0x80,0x40,0x20,0x18,0x07,0x0C,0x10,0x60,0x80,0x00,0x00,0x00,
+0x00,0x00,0x06,0x0B,0x10,0x26,0x28,0x28,0x20,0x20,0x10,0x0F,0x00,0x00,0x00};
+    lcd.LCD_draw_bmp_pixel(20,20, cloudbmp, 15,15); //position de base / nom / taille
   delay(2000);
 }
 
