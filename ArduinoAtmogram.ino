@@ -168,6 +168,9 @@ void loop()
   
   // Refresh time
   delay(10000);
+
+  // LCD blink 2 times to notify the refresh
+  lcdBlink(2, 200);
 }
 
 void lcdBlink(int count, int delayMs) {
