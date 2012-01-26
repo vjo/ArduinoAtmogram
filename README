@@ -6,9 +6,9 @@
 Monitor and display temperature and humidity informations on a LCD screen and log it on a web server.
 
 Arduino Uno with:
-- DHT11 (temperature & humidity sensors);
-- LCD 4884 screen;
-- Ethernet shield;
+  - DHT11 (temperature & humidity sensors);
+  - LCD 4884 screen;
+  - Ethernet shield;
 
 
 * Installation *
