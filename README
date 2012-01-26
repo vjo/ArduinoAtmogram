@@ -1,1 +1,8 @@
-Use arduino Uno with DHT11 (temperature & humidity) sensor and display result on a LCD 4884 screen.
+Arduino Atmogram
+
+Monitor, log and display temperature and humidity informations on a LCD screen and on a web server.
+
+Arduino Uno with :
+- DHT11 (temperature & humidity sensors) ;
+- LCD 4884 screen ;
+- Ethernet shield ;
