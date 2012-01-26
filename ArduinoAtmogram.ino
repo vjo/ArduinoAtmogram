@@ -145,7 +145,7 @@ void loop()
     
     // Make a HTTP request:
     char req[80];
-    sprintf(req, "GET /~victor/arduino/index.php?temp=%s&humi=%s HTTP/1.0", tempBuf, humiBuf);
+    sprintf(req, "GET /index.php?temp=%s&humi=%s HTTP/1.0", tempBuf, humiBuf);
     
     //Serial.println(req); // print the request
     
@@ -164,8 +164,9 @@ void loop()
     Serial.print(c);
   }
   
-  client.stop(); //if not, it can re-connect anymore
+  client.stop(); // if not, it can re-connect anymore
   
+  // Refresh time
   delay(10000);
 }
 
